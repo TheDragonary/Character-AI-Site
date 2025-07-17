@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-config.autoAddCss = false;
 
 const notoSans = Noto_Sans({
     subsets: ['latin'],

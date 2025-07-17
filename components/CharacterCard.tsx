@@ -9,7 +9,7 @@ interface CharacterCardProps {
 export default function CharacterCard({ name, description, imageUrl }: CharacterCardProps) {
     return (
         <div className="bg-zinc-100 dark:bg-zinc-900 rounded-xl p-4 shadow hover:shadow-lg transition">
-            <div className="w-full h-40 relative mb-4 rounded-md overflow-hidden">
+            <div className="w-full h-60 relative mb-4 rounded-md overflow-hidden">
                 <Image
                     src={imageUrl}
                     alt={name}
