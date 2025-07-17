@@ -17,8 +17,8 @@ export default function CharacterCard({ name, description, imageUrl }: Character
                     className="object-cover"
                 />
             </div>
-            <h3 className="text-xl font-semibold">{name}</h3>
-            <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1">
+            <h3 className="text-xl font-heading font-semibold">{name}</h3>
+            <p className="text-zinc-600 dark:text-zinc-400 text-sm mt-1 font-accent">
                 {description}
             </p>
         </div>

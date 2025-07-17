@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
+const notoSans = Noto_Sans({
+    subsets: ['latin'],
+    variable: '--font-noto-sans',
+    weight: ['400', '700'],
+    display: 'swap',
 });
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+const montserrat = Montserrat({
+    subsets: ['latin'],
+    variable: '--font-montserrat',
+    weight: ['400', '600', '700'],
+    display: 'swap',
+});
+const poppins = Poppins({
+    subsets: ['latin'],
+    variable: '--font-poppins',
+    weight: ['400', '600', '700'],
+    display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -20,18 +29,10 @@ export const metadata: Metadata = {
     description: "AI characters, brewed just for you",
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                {children}
-            </body>
+        <html lang="en" className={`${notoSans.variable} ${montserrat.variable} ${poppins.variable}`}>
+            <body>{children}</body>
         </html>
     );
 }

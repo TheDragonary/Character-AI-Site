@@ -21,7 +21,7 @@ const characters = [
 export default function PopularCharacters() {
     return (
         <section className="py-16 bg-gray-100 dark:bg-gray-900">
-            <h2 className="text-4xl font-semibold text-center mb-8">Popular Characters</h2>
+            <h2 className="text-4xl font-heading font-semibold text-center mb-8">Popular Characters</h2>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto">
                 {characters.map((char) => (
                     <CharacterCard
